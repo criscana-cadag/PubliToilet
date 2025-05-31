@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PubliToilet</title>
+    <link rel="stylesheet" href="homestyle.css">
+</head>
+<body>
+    
+<!--starting header section-->
+
+<header>
+
+    <a href="#" class="logo">PubliToilet</a>
+
+    <nav class="navbar">
+        <a href="#about">About</a>
+        <a href="#add">Add New Toilet</a>
+        <a href="#volhelp">Volunteer Help</a>
+        
+        <div class="dashboard-dropdown">
+                <button class="dashboard-button">Dashboard</button>
+                <div class="dropdown-content">
+                    <a href="#">My Dashboard</a>
+                    <a href="#">Recently Visited</a>
+                    <a href="#">Saved Toilets</a>
+                    <a href="#">Admin Dashboard</a>
+                </div>
+        </div>    
+
+    </nav>
+
+    <div class="logsign-button">
+        <button class="login-button">Log in</button>
+        <button class="signup-button">Sign up</button>
+    </div>
+
+</header>
+
+<!--ending header section-->
+
+<!--starting main section-->
+
+<main class="main-content">
+
+    <div class="left-panel">
+        <input type="text" placeholder="Enter location..." class="location-input">
+
+        <div class="filter-section">
+            <input type="checkbox" id="filterToggle" class="filter-toggle-checkbox">
+            
+            <label for="filterToggle" class="filter-toggle-label">Filters (Active)</label>
+
+            <div class="filter-options">
+                <div class="filter-item">
+                    <span>Wheelchair Accessible</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="filter-item">
+                    <span>Grab Bars</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="filter-item">
+                    <span>Gender Neutral</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="filter-item">
+                    <span>Baby Changing</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="filter-item">
+                    <span>Accessible</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                    
+                <div class="reset-filters">
+                    <a href="#">Reset Filters</a>
+                </div>
+            </div>
+        </div>
+
+        <button class="search-button">Search</button>
+
+    </div>
+    
+    <div>
+        <img src="HILmr.png" alt="Map of Locations" class="map-placeholder">
+        <button class="find-nearby-button">FIND NEARBY</button>
+    </div>
+</main>
+
+<!--ending main section-->
+
+</body>
+</html>
