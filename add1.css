@@ -1,0 +1,275 @@
+:root {
+  --light: #FEFEFE;
+  --light-gray: #E7E9F0;
+  --dark-blue: #051747;
+  --steel-blue: #535F80;
+  --mid-blue: #081F62;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light);
+  color: var(--dark-blue);
+}
+
+/* NAVIGATION BAR */
+.navbar {
+  background-color: var(--mid-blue);
+  color: white;
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-logo i {
+  font-size: 1.2rem;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+  display: block;
+  font-weight: 500;
+}
+
+.nav-links .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  background-color: var(--dark-blue);
+  border-radius: 5px;
+  overflow: hidden;
+  min-width: 160px;
+  z-index: 1000;
+}
+
+.dropdown-menu li a {
+  padding: 10px 15px;
+  white-space: nowrap;
+}
+
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-outline {
+  padding: 8px 16px;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: white;
+  color: var(--mid-blue);
+}
+
+.btn-solid {
+  padding: 8px 16px;
+  background-color: white;
+  color: var(--mid-blue);
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn-solid:hover {
+  background-color: var(--light-gray);
+}
+
+/* MOBILE NAVIGATION */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background-color: var(--mid-blue);
+    margin-top: 10px;
+    gap: 0;
+  }
+
+  .navbar.expanded .nav-links {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+  }
+
+  .nav-buttons {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+    gap: 10px;
+  }
+
+  .navbar.expanded .nav-buttons {
+    display: flex;
+  }
+
+  .btn-outline, .btn-solid {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+.user-icon {
+  font-size: 1.5rem;
+}
+
+/* Map Section */
+.map-section {
+  position:relative;
+  width: 90%;
+  height: 300px;
+  background: #e0e0e0;
+  margin-bottom: 30px;
+}
+
+.map-img {
+  width: 111%;
+  height: 110%;
+  object-fit:cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.pin-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 12px 18px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.pin-button:hover {
+  background-color: #45a049;
+}
+
+/* Form Section */
+.form-section {
+  background-color: #1f2b6c;
+  padding: 40px 20px;
+  color: white;
+  text-align: left;
+}
+
+.toilet-form {
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.toilet-form label {
+  font-size: 1rem;
+}
+
+.toilet-form input[type="text"],
+.toilet-form select {
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.rating {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.rating label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  background-color: #535f80;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 700px;
+  align-self: center;
+}
+
+.submit-btn:hover {
+  background-color: #535f80;
+}
