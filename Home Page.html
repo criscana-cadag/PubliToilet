@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Homepage</title>
+  <link rel="stylesheet" href="Home page.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <i class="fas fa-toilet-paper"></i> PubliToilet
+      </div>
+      <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links">
+        <li><a href="About Us.html">About</a></li>
+        <li><a href="Add New Toilet.html">Add New Toilet</a></li>
+        <li><a href="Volunteer Page.html">Volunteer Help</a></li>
+        <li class="dropdown" onclick="toggleDropdown(event)">
+          <a href="#">Dashboard</a>
+          <ul class="dropdown-menu">
+            <li><a href="My dashboard.html">My Dashboard</a></li>
+            <li><a href="Admin Dashboard.html">Admin Dashboard</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="Log in Page.html" class="btn-outline">Log in</a>
+        <a href="Sign Up Page.html" class="btn-solid">Sign up</a>
+      </div>
+    </div>
+  </nav>
+
+  <script src="Home Page.js"></script>
+</body>
+</html>
