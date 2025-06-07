@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - PubliToilet</title>
+  <link rel="stylesheet" href="aboutus.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <i class="fas fa-toilet-paper"></i> PubliToilet
+      </div>
+      <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links">
+        <li><a href="About Us.html">About</a></li>
+        <li><a href="Add New Toilet.html">Add New Toilet</a></li>
+        <li><a href="Volunteer Page.html">Volunteer Help</a></li>
+        <li class="dropdown" onclick="toggleDropdown(event)">
+          <a href="#">Dashboard</a>
+          <ul class="dropdown-menu">
+            <li><a href="My dashboard.html">My Dashboard</a></li>
+            <li><a href="Admin Dashboard.html">Admin Dashboard</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="Log in Page.html" class="btn-outline">Log in</a>
+        <a href="Sign Up Page.html" class="btn-solid">Sign up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+<section class="hero-banner">
+ <div>
+ <h1><span class="blue-bubble">About</span><span>Us</span></h1>
+ <p style="margin-top: 10px; font-size: 16px;">
+ Learn about our mission, vision, values, services, and goals.
+ </p>
+ </div>
+</section>
+
+<!-- Our Values -->
+<section class="section" style="background-color: #e8eff7;">
+<h2 class="blue-title" style="margin-bottom: 0;">Our Values</h2>
+<p style="text-align: center; font-size: 14px; margin-top: 5px; color: #333;">
+Principles that guide our work.
+</p>
+<div class="values-grid">
+<div class="value-item">
+<div class="value-circle"><img src="https://i.postimg.cc/WbxTyLLP/environment-removebg-preview.png" alt="Environmental Responsibility" /></div>
+<h3>Environmental Responsibility</h3>
+<p>Eco-friendly and water saving practices</p>
+</div>
+<div class="value-item">
+<div class="value-circle"><img src="https://i.postimg.cc/cCrGDTFH/HANDS-removebg-preview.png" alt="Inclusivity" /></div>
+<h3>Inclusivity</h3>
+<p>Inclusive restroom access for all</p>
+</div>
+<div class="value-item">
+<div class="value-circle"><img src="https://i.postimg.cc/0QKLDrjM/light-bulb-removebg-preview.png" alt="Transparency" /></div>
+<h3>Transparency</h3>
+<p>Honest, user-driven reviews and information</p>
+</div>
+</div>
+</section>
+
+<!-- About -->
+<section class="section">
+<div class="about-box">
+<p>
+PubliToilet is a student-led project created by a team at FEU Tech’s College of Computer Studies. Our web platform helps users find nearby public toilets, rate cleanliness, report issues to local authorities, and access hygiene education. Supporting UN Sustainable Development Goal 6, we promote accessible and inclusive sanitation through interactive maps, accessibility filters, a reporting system, and educational page.
+</p>
+</div>
+</section>
+
+<!-- Mission -->
+<section class="section" style="background-color: #e8eff7; margin-bottom: 30px;">
+<div style="display: flex; flex-wrap: wrap; align-items: center;">
+<div style="flex: 1; min-width: 250px;">
+<img src="https://pbs.twimg.com/media/GiUXt6KXQAAL8IQ?format=jpg&name=large" alt="Toilet" style="width: 100%; height: auto;">
+</div>
+<div style="flex: 2; padding: 20px;">
+<h2 class="blue-title" style="text-align: left;">Our Mission</h2>
+<p>
+To provide a user-centered digital platform that ensures safe, clean, and accessible public toilets for all by enabling real-time location services, reporting tools, and educational resources—promoting hygiene, inclusivity, and public health in alignment with Sustainable Development Goal 6: Clean Water and Sanitation.
+</p>
+</div>
+</div>
+</section>
+
+<!-- Vision -->
+<section class="section" style="background-color: #e8eff7;">
+<div style="display: flex; flex-wrap: wrap; align-items: center;">
+<div style="flex: 2; padding: 20px;">
+<h2 class="blue-title" style="text-align: right;">Our Vision</h2>
+<p style="text-align: right;">
+To build a connected and empowered community where every individual has equal access to clean, well-maintained, and inclusive sanitation facilities—contributing to a healthier, more sustainable, and socially responsible society.
+</p>
+</div>
+<div style="flex: 1; min-width: 250px;">
+<img src="https://pbs.twimg.com/media/GiUXt6KXQAAL8IQ?format=jpg&name=large" alt="Restroom" style="width: 100%; height: auto;">
+</div>
+</div>
+</section>
+
+<!-- What We Do -->
+<section class="section">
+<hr style="border: none; border-top: 1px solid #c9a879; margin-bottom: 30px; width: 100%;" />
+<h2 class="blue-title">What We Do</h2>
+<p style="text-align: center; font-size: 14px;">Our service and goals.</p>
+<div class="what-we-do-container">
+<div class="what-we-do-item bg-blue">
+<img src="https://play-lh.googleusercontent.com/cMyb7Vygstb-MRvxB4nJ3UiLOdt4uI80TK9MpqCOPfnVsAtz1OqfbUMT1Xh_Je6vgNo=w240-h480-rw" alt="Locate Icon" />
+<div>We locate toilet.</div>
+</div>
+<div class="what-we-do-item bg-brown">
+<img src="https://i.postimg.cc/hGsG6y1b/Screenshot-2023-01-17-112105-1-removebg-preview.png" alt="Report Icon" />
+<div>We send reports to LGU for development.</div>
+</div>
+<div class="what-we-do-item bg-brown">
+<img src="https://i.postimg.cc/NfjkzS8b/people-removebg-preview.png" alt="Community Icon" />
+<div>We allow the community to voice out for the betterment of sanitation through rate and report system.</div>
+</div>
+<div class="what-we-do-item bg-blue">
+<img src="https://knowsdgs.jrc.ec.europa.eu/themes/sdgs/assets/img/sdg6.png" alt="SDG Icon" />
+<div>
+To promote Sustainable Development Goal 6: Clean Water and Sanitation. <br />
+<a href="#" style="color: white;">Read More →</a>
+</div>
+</div>
+</div>
+</section>
+
+  <script src="aboutus.js"></script>
+</body>
+</html>
