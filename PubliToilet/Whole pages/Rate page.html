@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Report This Toilet</title>
+  <link rel="stylesheet" href="Report Page.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --primary-color: #005792;
+      --secondary-color: #C9E8FF;
+      --light: #f9f9f9;
+      --dark-blue: #002d62;
+      --text-dark: #222;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light);
+      margin: 0;
+      padding: 0;
+      color: var(--text-dark);
+    }
+
+    .header-banner {
+      background-color: #e6f2fb;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .header-content h1 {
+      font-size: 2.5rem;
+      color: var(--dark-blue);
+      margin-bottom: 10px;
+    }
+
+    .header-content p {
+      font-size: 1.1rem;
+      color: #444;
+      margin: 0 auto;
+      max-width: 600px;
+    }
+
+    .toilet-info {
+      background-color: #fff;
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    .toilet-info p {
+      margin: 8px 0;
+      font-size: 1rem;
+    }
+
+    .recent-button {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    form {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+
+    .form-group label.inline {
+      display: inline-block;
+      margin-right: 10px;
+      font-weight: normal;
+    }
+
+    textarea,
+    select,
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      background-color: var(--dark-blue);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--dark-blue);
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .header-content h1 {
+        font-size: 2rem;
+      }
+
+      .header-content p {
+        font-size: 1rem;
+        padding: 0 10px;
+      }
+
+      .toilet-info,
+      form {
+        margin: 20px 15px;
+        padding: 20px;
+      }
+
+      .recent-button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+      <!-- NAVIGATION BAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <i class="fas fa-toilet-paper"></i> PubliToilet
+      </div>
+      <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links">
+        <li><a href="About Us.html">About</a></li>
+        <li><a href="Add New Toilet.html">Add New Toilet</a></li>
+        <li><a href="Volunteer Page.html">Volunteer Help</a></li>
+        <li class="dropdown" onclick="toggleDropdown(event)">
+          <a href="#">Dashboard</a>
+          <ul class="dropdown-menu">
+            <li><a href="My dashboard.html">My Dashboard</a></li>
+            <li><a href="Admin Dashboard.html">Admin Dashboard</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="Log in Page.html" class="btn-outline">Log in</a>
+        <a href="Sign Up Page.html" class="btn-solid">Sign up</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="header-banner">
+    <div class="header-content">
+      <h1>Rate This Toilet</h1>
+      <p>Your feedback helps us improve public toilet and sanitation.</p>
+    </div>
+  </header>
+
+  <div class="toilet-info">
+    <p><strong>Toilet Name:</strong> Public Toilet - Rizal Park</p>
+    <p><strong>Location:</strong> Near Main Fountain, Rizal Park, Manila</p>
+    <a href="My dashboard.html" class="recent-button">View Recently Visited Toilet</a>
+  </div>
+
+  <form action="submit-rating.php" method="POST">
+    <div class="form-group">
+      <label>Cleanliness Rating</label>
+      <label class="inline"><input type="radio" name="cleanliness" value="1">1</label>
+      <label class="inline"><input type="radio" name="cleanliness" value="2">2</label>
+      <label class="inline"><input type="radio" name="cleanliness" value="3">3</label>
+      <label class="inline"><input type="radio" name="cleanliness" value="4">4</label>
+      <label class="inline"><input type="radio" name="cleanliness" value="5">5</label>
+    </div>
+
+    <div class="form-group">
+      <label for="maintenance">Is the facility properly maintained?</label>
+      <select id="maintenance" name="maintenance" required>
+        <option hidden>Choose an option</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Needs Urgent Repair">Needs Urgent Repair</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Accessibility Features</label>
+      <label><input type="checkbox" name="accessibility[]" value="Wheelchair Accessible">Wheelchair Accessible</label><br />
+      <label><input type="checkbox" name="accessibility[]" value="Has Grab Bars">Has Grab Bars</label><br />
+      <label><input type="checkbox" name="accessibility[]" value="Gender-Neutral Toilet">Gender-Neutral Toilet</label><br />
+      <label><input type="checkbox" name="accessibility[]" value="Baby Changing Station">Baby Changing Station</label>
+    </div>
+
+    <div class="form-group">
+      <label for="water_availability">Water Availability</label>
+      <select id="water_availability" name="water_availability" required>
+        <option hidden>Choose an option</option>
+        <option value="Available">Available</option>
+        <option value="Limited">Limited</option>
+        <option value="No Water">No Water</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Water Quality Rating</label>
+      <label class="inline"><input type="radio" name="water_quality" value="1">1</label>
+      <label class="inline"><input type="radio" name="water_quality" value="2">2</label>
+      <label class="inline"><input type="radio" name="water_quality" value="3">3</label>
+      <label class="inline"><input type="radio" name="water_quality" value="4">4</label>
+      <label class="inline"><input type="radio" name="water_quality" value="5">5</label>
+    </div>
+
+    <div class="form-group">
+      <label for="additional_comments">Additional Comments</label>
+      <textarea id="additional_comments" name="comments" rows="4" placeholder="Type your feedback here..."></textarea>
+    </div>
+
+    <button type="submit">Submit Feedback</button>
+  </form>
+
+  <footer>
+    &copy; 2025 PubliToilet. All rights reserved.
+  </footer>
+
+  <script src="Rate Page.js"></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color:floralwhite;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+        }
+
+        .navbar-brand {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .navbar-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar-links li {
+            position: relative;
+        }
+
+        .navbar-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-links a:hover {
+            color: #007BFF;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 6px;
+            padding: 10px 0;
+            min-width: 180px;
+        }
+
+        .dropdown-menu li {
+            padding: 8px 20px;
+        }
+
+        .dropdown-menu a {
+            color: #333 !important;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .login-button {
+            padding: 8px 16px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #ccc;
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+
+        .signup-button {
+            padding: 8px 16px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .navbar-links {
+                flex-direction: column;
+                width: 100%;
+                background-color: #fff;
+                padding-top: 10px;
+            }
+
+            .dropdown-menu {
+                position: static;
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+        /* Profile Circle */
+.profile-circle {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover; /* Ensures image fits well */
+    cursor: pointer;
+}
+
+/* Tooltip (Optional) */
+.profile-circle:hover .tooltip {
+    display: block;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 6px;
+    z-index: 1000;
+}
+
+.tooltip a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.tooltip a:hover {
+    color: #007BFF;
+}
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <img src="" alt="Logo">
+            PubliToilet
+        </div>
+        <ul class="navbar-links">
+            <li><a href="About-Us-page.html">About</a></li>
+            <li><a href="Add-New-Toilet.html">Add New Toilet</a></li>
+            <li><a href="Volunteer-Help.html">Volunteer Help</a></li>
+            <li class="dropdown">
+                <a href="#">Dashboard</a>
+                <ul class="dropdown-menu">
+                    <li><a href="User-Dashboard.html">My Dashboard</a></li>
+                    <li><a href="RecentlyVisited.html">Recently Visited</a></li>
+                    <li><a href="Saved-Toilets.html">Saved Toilets</a></li>
+                    <li><a href="Admin-Dashboard.html">Admin Dashboard</a></li>
+                </ul>
+            </li>
+        </ul>
+          <div class="buttons">
+    <div class="profile-circle">
+        <a href="user-dashboard.html">
+            <img src="https://example.com/avatar.png " alt="Profile" class="profile-icon">
+        </a>
+    </div>
+</div>
+    </nav>
+</body>
+</html>

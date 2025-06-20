@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Volunteer Page</title>
+  <link rel="stylesheet" href="Volunteer Page.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <i class="fas fa-toilet-paper"></i> PubliToilet
+      </div>
+      <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links">
+        <li><a href="About Us.html">About</a></li>
+        <li><a href="Add New Toilet.html">Add New Toilet</a></li>
+        <li><a href="Volunteer Page.html">Volunteer Help</a></li>
+            <li><a href="My dashboard.html">My Dashboard</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="Log in Page.html" class="btn-outline">Log in</a>
+        <a href="Sign Up Page.html" class="btn-solid">Sign up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Become a Volunteer</h1>
+    <p>Support your community by helping us maintain clean, accessible, and inclusive toilet facilities.</p>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <!-- CARD 1 -->
+    <div class="card">
+      <div class="card-img" style="background-image: url('https://ik.imagekit.io/kwck63nc2/PubliToilet/istockphoto-899116826-612x612.jpg?updatedAt=1749223919667');"></div>
+      <div class="card-text">
+        <h3>Donate Supplies</h3>
+        <p>Contribute hygiene products or funds 
+to help maintain and improve public 
+toilet conditions.</p>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card">
+      <div class="card-img" style="background-image: url('https://ik.imagekit.io/kwck63nc2/PubliToilet/worldtoiletday_11192012-03.jpg?updatedAt=1749225940763');"></div>
+      <div class="card-text">
+        <h3>Join Cleaning Drives</h3>
+        <p>Lead seminars or sessions in schools and barangays promoting hygiene and sanitation awareness.</p>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card">
+      <div class="card-img" style="background-image: url('https://ik.imagekit.io/kwck63nc2/PubliToilet/475650617_122219323964061863_5146776913906849897_n.jpg?updatedAt=1749226329319');"></div>
+      <div class="card-text">
+        <h3>Monitor Facilities</h3>
+        <p>Volunteering is a powerful way to impact lives. Your time and effort help build a stronger, more compassionate community.</p>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="card">
+      <div class="card-img" style="background-image: url('https://ik.imagekit.io/kwck63nc2/PubliToilet/roundup14-nov-29-2018_orig.jpg?updatedAt=1749226554968');"></div>
+      <div class="card-text">
+        <h3>Hygiene Education</h3>
+        <p>Lead seminars or sessions in schools and barangays promoting hygiene and sanitation awareness.</p>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+    <label for="area">Preferred Volunteer Area</label>
+<select id="area" name="area" required>
+  <option value="" disabled selected hidden>Choose your preference</option>
+  <option value="supplies">Donate Supplies</option>
+  <option value="cleaning">Join Cleaning Drives</option>
+  <option value="monitor">Monitor Facilities</option>
+  <option value="education">Hygiene Education</option>
+</select>
+
+
+      <label for="message">Tell us why you want to volunteer:</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- FOOTER OUTSIDE CONTAINER -->
+  <footer>
+    &copy; 2025 Helping Hands Organization. All rights reserved.
+  </footer>
+
+  <script src="Volunteer Page.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,251 @@
+:root {
+  --light: #FEFEFE;
+  --light-gray: #E7E9F0;
+  --dark-blue: #051747;
+  --steel-blue: #535F80;
+  --mid-blue: #081F62;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light);
+  color: var(--dark-blue);
+}
+
+/* NAVIGATION BAR */
+.navbar {
+  background-color: var(--mid-blue);
+  color: white;
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-logo i {
+  font-size: 1.2rem;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+  display: block;
+  font-weight: 500;
+}
+
+.nav-links .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  background-color: var(--dark-blue);
+  border-radius: 5px;
+  overflow: hidden;
+  min-width: 160px;
+  z-index: 1000;
+}
+
+.dropdown-menu li a {
+  padding: 10px 15px;
+  white-space: nowrap;
+}
+
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-outline {
+  padding: 8px 16px;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: white;
+  color: var(--mid-blue);
+}
+
+.btn-solid {
+  padding: 8px 16px;
+  background-color: white;
+  color: var(--mid-blue);
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn-solid:hover {
+  background-color: var(--light-gray);
+}
+
+/* MOBILE NAVIGATION */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background-color: var(--mid-blue);
+    margin-top: 10px;
+    gap: 0;
+  }
+
+  .navbar.expanded .nav-links {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+  }
+
+  .nav-buttons {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+    gap: 10px;
+  }
+
+  .navbar.expanded .nav-buttons {
+    display: flex;
+  }
+
+  .btn-outline, .btn-solid {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+main {
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #2c3e70;
+    justify-content: center;
+}
+
+.info-box {
+    background-color: #d1d9e6;
+    color: #2c3e70;
+    padding: 15px 25px;
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+    border-radius: 4px;
+}
+
+.login-text {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+.login-text a {
+    color: #2c3e70;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.login-text a:hover {
+    color: #1b2a52;
+}
+
+.center-button {
+    text-align: center;
+}
+
+.login-signup-btn {
+    background-color: #2c3e70;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(44, 62, 112, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 15px;
+  color: white;              /* Keeps the text white */
+  text-decoration: none;     /* Removes the underline */
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.button:visited {
+  color: white;              /* Prevents purple after clicking */
+  text-decoration: none;
+}
+.button:hover {
+  background-color: #88a8e9; /* Optional: hover effect */
+}
+
+.login-signup-btn:hover {
+    background-color: #1b2a52;
+}

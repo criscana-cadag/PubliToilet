@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="ratePage" content="width=device-width", initial-scale="1">
+    <title> Rate This Toilet </title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+            background-color: rgb(255, 255, 255);
+            margin: 0 auto;
+            padding: 0; 
+            line-height: 2;
+            width: 70%;
+            text-align: left;
+        }
+
+        .top-container {
+            max-width: none;
+            height: 280px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color:snow;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: left;
+            overflow: hidden;
+        }
+
+        .recent-button {
+            display: inline-block;
+            background-color: #C9E8FF;
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            float: right;
+            margin-top: 10px;
+            outline: 1px solid black; 
+        }
+
+        .Cleanliness_Options {
+            word-spacing: 25px;
+        }
+
+        .Water_Quality_Options {
+            word-spacing: 25px; 
+        }
+
+        /* Style for label */
+        label[for="Rate_feedback"] {
+            font-weight: bold;
+            display: block;
+            margin-top: 1rem;
+        }
+
+        /* Style for textarea */
+        textarea#Rate_feedback {
+            width: 100%; /* Full width of its container */
+            min-height: 120px; /* Minimum height */
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            resize: vertical; /* Allows user to manually resize vertically */
+            box-sizing: border-box; /* Makes sure padding doesn't overflow width */
+            transition: border-color 0.3s ease;
+        }
+
+        /* Optional: Focus effect */
+        textarea#Rate_feedback:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        button[type="submit"] {
+            width: 100%;       /* Full width of parent */
+            padding: 14px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: navy;
+            color: white;
+            border: none;
+            border-radius: 6px;
+        }
+
+        /* Select Dropdown Styling */
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background-color: white;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='gray' stroke-width='2'><path d='M2 5l6 6 6-6'/></svg>");
+            background-position: right 10px center;
+            background-repeat: no-repeat;
+            background-size: 16px 16px;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #007BFF;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .top-container {
+                padding: 15px;
+            }
+
+            .recent-button {
+                width: 100%;
+                float: none;
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="top-container">
+        <h1 style="text-align: center; color: darkslateblue;">Rate This Toilet</h1>
+        <p><strong>Toilet Name:</strong></p>
+        <p><strong>Location:</strong></p>
+        <a href="RecentlyVisited.html" class="recent-button">View Recently Visited Toilet</a>
+    </div>
+
+    <form action="#" method="post">
+
+        <label for="CleanlinessRating">Cleanliness Rating</label>
+        <div class="Cleanliness_Options"> 
+            <label> <input type="radio" name="CleanlinessRating" value="1"> 1</label>
+            <label> <input type="radio" name="CleanlinessRating" value="2"> 2</label>
+            <label> <input type="radio" name="CleanlinessRating" value="3"> 3</label>
+            <label> <input type="radio" name="CleanlinessRating" value="4"> 4</label>
+            <label> <input type="radio" name="CleanlinessRating" value="5"> 5</label>
+        </div>
+        <br> 
+
+        <label for="FacilityMaintenance">Is the facility properly maintained?</label> <br>
+        <div class="FacilityMaintenance"></div>
+        <select required id="FacilityMaintenance" name="Maintenance Options">
+            <option hidden>Choose an option </option>
+            <option value="Yes"> Yes</option>
+            <option value="No"> No</option>
+            <option value="Needs Urgent Repair"> Needs Urgent Repair</option>
+        </select>
+        <br>
+        <br> 
+        <label>Accessibility for Inclusivity?</label><br>
+        <input type="checkbox" id="wheelchair" name="accessibility_options[]" value="Wheelchair Accessible">
+        <label for="wheelchair">Wheelchair Accessible</label><br>
+        <input type="checkbox" id="grab-bars" name="accessibility_options[]" value="Has Grab Bars">
+        <label for="grab-bars">Has Grab Bars</label><br>
+        <input type="checkbox" id="gender-neutral" name="accessibility_options[]" value="Gender-Neutral Toilet">
+        <label for="gender-neutral">Gender-Neutral Toilet</label><br>
+        <input type="checkbox" id="baby-station" name="accessibility_options[]" value="Baby Changing Station">
+        <label for="baby-station">Baby Changing Station</label>
+        <br> 
+        <br>
+        <div class="WaterAvailability"></div>             
+        <label for="WaterAvailability">Water Availability</label> <br>
+        <select required id="FacilityMaintenance" name="Availability_Options">
+            <option hidden>Choose an option </option>
+            <option value="Available">Available</option>
+            <option value="Limited">Limited</option>
+            <option value="NoWater">No Water</option>
+        </select>
+        <br> 
+        <br>
+
+        <label for="Water_Qaulity">Water Quality Rating </label>
+        <div class="Water_Quality_Options"> 
+            <label> <input type="radio" name="Water_Qaulity" value="1"> 1</label>
+            <label> <input type="radio" name="Water_Qaulity" value="2"> 2</label>
+            <label> <input type="radio" name="Water_Qaulity" value="3"> 3</label>
+            <label> <input type="radio" name="Water_Qaulity" value="4"> 4</label>
+            <label> <input type="radio" name="Water_Qaulity" value="5"> 5</label>
+        </div>
+        <br> 
+        <label for="FacilityMaintenance">Is the facility properly maintained?</label> <br>
+        <select required id="FacilityMaintenance" name="Maintenance Options">
+            <option hidden>Choose an option </option>
+            <option value="Yes"> Yes</option>
+            <option value="No"> No</option>
+            <option value="Needs Urgent Repair"> Needs Urgent Repair</option>
+        </select>
+        <br> <br>
+        <label for="SanitaryAvailability">Are sanitary products (e.g., tissue, soap, sanitary napkins) available?</label> <br>
+        <select required id="SanitaryAvailability" name="SanitaryOptions">
+            <option hidden>Choose an option </option>
+            <option value="Yes_All">Yes, All are Available </option>
+            <option value="Some">Some are Available</option>
+            <option value="None">None are available</option>
+        </select>
+        <br> <br>
+        <label for="Rate_feedback">Leave a Feedback (Optional)</label>
+        <br>
+        <textarea id="Rate_feedback" name="Rate_feedback" placeholder="Write any feedback here..." rows="6"></textarea>
+        <br>
+        <button type="submit">Submit Rating</button> <br>
+        <p></p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Homepage</title>
+  <link rel="stylesheet" href="add1.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+ <nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <i class="fas fa-toilet-paper"></i> PubliToilet
+    </div>
+
+    <!-- Desktop Navigation -->
+    <ul class="nav-links">
+      <li><a href="About Us.html">About</a></li>
+      <li><a href="Add New Toilet.html">Add New Toilet</a></li>
+      <li><a href="Volunteer Page.html">Volunteer Help</a></li>
+          <li><a href="My dashboard.html">My Dashboard</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Mobile Header: Hamburger + Profile Icon -->
+    <div class="mobile-header">
+      <div class="mobile-user-icon">👤</div>
+      <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </div>
+</nav>
+  <section class="map-section">
+    <button class="pin-button">PIN NEW TOILET</button>
+    <img src="HILmr.png" alt="Map Placeholder" class="map-img"/>
+  </section>
+
+  <section class="form-section">
+    <form class="toilet-form">
+      <label for="toiletName">Toilet Name/Description:</label>
+      <input type="text" id="toiletName" placeholder="e.g. Mall Restroom 5th Floor" />
+
+      <label for="locationDetails">Location Details:</label>
+      <input type="text" id="locationDetails" placeholder="Describe the exact location.." />
+
+      <label for="accessibility">Accessibility:</label>
+      <select id="accessibility">
+        <option value="" disabled selected>Select Accessibility</option>
+        <option value="wheelchair">Wheelchair Accessible</option>
+        <option value="grabbars">Grab Bars</option>
+        <option value="gender">Gender Neutral</option>
+        <option value="baby">Baby Changing</option>
+        <option value="accessible">Accessible</option>
+      </select>
+
+      <label>Rate the Cleanliness (1 to 5):</label>
+      <div class="rating">
+        <label><input type="radio" name="rating" value="1" /> 1</label>
+        <label><input type="radio" name="rating" value="2" /> 2</label>
+        <label><input type="radio" name="rating" value="3" /> 3</label>
+        <label><input type="radio" name="rating" value="4" /> 4</label>
+        <label><input type="radio" name="rating" value="5" /> 5</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </section>
+
+  <script src="add1.js"></script>
+</body>
+</html>
